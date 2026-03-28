@@ -1,0 +1,10 @@
+module inve(y,a);
+output y;
+wire b0,b1;
+input a;
+
+//mux(y,1'b1,1.b0,a)
+assign b0 = 1'b1;
+assign b1 = 1'b0;
+mux m1(y,b0,b1,a);
+endmodule
