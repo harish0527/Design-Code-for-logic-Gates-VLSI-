@@ -1,0 +1,25 @@
+module lg_tb;
+reg a,b;
+wire y;
+
+andg g1(y,a,b);
+exnor g2(y,a,b);
+exorg g3(y,a,b);
+nandg g4(y,a,b);
+norg g5(y,a,b);
+org g6(y,a,b);
+inve g7(y,a);
+
+
+initial 
+begin
+a=1'b0;b=1'b0;
+#10 a=1'b0;b=1'b1;
+#10 a=1'b1;b=1'b0;
+#10 a=1'b1;b=1'b1;
+$finish;
+end
+initial
+$monitor("a=%b,b=%b,y=%b",a,b,y);
+
+endmodule
