@@ -1,0 +1,13 @@
+module exorg(y,a,b);
+output y;
+input a,b;
+wire i0,i1,i2,i3;
+wire w1,w2;
+assign i0=1'b0;
+assign i1=1'b1;
+assign i2=1'b1;
+assign i3=1'b0;
+mux m1(w1,i0,i1,a);
+mux m2(w2,i2,i3,a);
+mux m3(y,w1,w2,b);
+endmodule
